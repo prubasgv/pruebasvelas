@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaApp</title>
+ <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+  
+</head>
+<body>
+<header th:insert="fragments/menu.html::menu-principal">
+       </header>
+        <!--********************acerca de como se desarrollo la pagina ************************-->
+        <div class="container" style="margin-top: 90px;">
+            <div class="card">
+           
+            <h4 class="card-header">Acerca de <strong>Tienda App</strong> </h4>
+           
+            <div class="card-body">
+           
+           
+            <p>Aplicación para Publicar Ofertas de Productos
+           
+            desarrollada con Spring Boot y Bootstrap</p>
+           </div>
+            </div>
+            </div> <!-- /container -->
+
+        <!--***************pie de pagina****************-->
+         <footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+         <script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+  <script th:src="@{/boostrap/js/popper.js}"></script>
+  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>    
+        
+</body>
+</html>

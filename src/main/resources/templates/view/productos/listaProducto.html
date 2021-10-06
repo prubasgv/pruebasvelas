@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>TiendaApp | Listado de Productos</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+	 <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+    
+    <link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+  </head>
+
+  <body>
+      <header th:insert="fragments/menu.html::menu-principal">
+       </header><br><br>  
+
+	 <main role="main">     
+      <hr>
+      <div class="container"> 
+
+ 
+
+        <div class="card">
+          <h4 class="card-header"><strong>Listado de Productos</strong></h4>              
+          <div class="card-body">
+            <a class="btn btn-primary" 
+            th:href="@{/view/productos/crear}" title="Crear nueva Oferta de Trabajo" role="button"><i class="fas fa-file" aria-hidden="true"></i> Nueva</a>            
+            <hr>
+            <table class="table table-hover">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Descripción</th>                  
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Pago</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Tamaño</th>
+                  <th scope="col">Operaciones</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr th:each="p : ${productos}">
+                  <td th:text="${p.nombre}"></td>
+                  <td th:text="${p.descripcion}"></td>                 
+                  <td th:text="${p.fecha}"></td>
+                  <td th:text="${p.precio}"></td>
+                  <td><img th:src="@{/imges/{Decorativa.jfif} (Decorativa=${p.imagen})}" width="50" height="50"></td>
+                  <td th:text="${p.marca}"></td>
+                  <td>
+                      <a th:href="@{/view/productos/editar/{id} (id=${p.id})}" class="btn btn-success btn-sm" role="button" title="Editar el registro."><i class="fas fa-pencil-alt" aria-hidden="true"></i></a>
+                    <a th:href="@{/view/productos/eliminar/{id} (id=${p.id})}"
+                     onclick="return confirm('¿Estas seguro?')" class="btn btn-success btn-sm" role="button" title="Eliminar el registro."><i class="fas fa-trash" aria-hidden="true"></i></a>
+                    <a href="#" class="btn btn-success btn-sm" role="button" title="Detalles producto"><i class="fas fa-search" aria-hidden="true"></i></a>
+                  </td>
+                </tr>
+       
+                               
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div> <!-- /container -->
+
+    </main>
+
+	<footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+					<script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+					  <script th:src="@{/boostrap/js/popper.js}"></script>
+					  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>
+   </body>
+</html>

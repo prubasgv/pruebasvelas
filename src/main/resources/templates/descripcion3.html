@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+    <title>TiendaApp</title>
+  <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+  </head>
+<body>
+    <header th:insert="fragments/menu.html::menu-principal">
+       </header>
+<body>
+ <div class="container"  style="margin-top: 20px; "   >
+  <h4 class="font-weight-bold text-center text-capitalize" >
+                Productos Destacados</h4>
+                </div>
+                <div class="container-fluid p-3 my-3 ">
+                <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/cumpleanos.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                
+                <div class="card-body"> 
+                <h5 class="card-title"><center>Decora tu hogas o trabajo</center></h5>
+                <p class="card-text text-justify">
+                Decora tu hogar con velas decorativas
+                </p>
+                </div>
+                <div class="card-footer">
+                <center>
+                <small  class="btn btn-warning"><a  th:href="@{/registro}"role="button">Comprar </a></small>
+                </center>
+                </div>
+                </div>
+               </div>
+                
+                <div class="card-body"> 
+                <h5 class="card-title">Vela decorativa creada con cera de color para dar ese toque de
+                diseño en tu entorno, cuenta con recipiente en forma de charola de color aluminio.</h5><br>
+                <p class="card-text text-justify">
+                Si quieres adiquirir este producto y personalizarlo a tu gusto dale clic en comprar
+                </p>
+               </div>
+               </div>
+ 			<!-- Otro --> 
+  
+  				<div class="container"  style="margin-top: 20px; "   >
+ 				 <h4 class="font-weight-bold text-center text-capitalize" >
+                Productos Destacados</h4>
+                </div>
+                <div class="container-fluid p-3 my-3 ">
+                <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/cumpleanos.2jpg.jfif}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                
+                <div class="card-body"> 
+                <h5 class="card-title"><center>Decora tu hogas o trabajo</center></h5>
+                <p class="card-text text-justify">
+                Decora tu hogar con velas decorativas
+                </p>
+                </div>
+                <div class="card-footer">
+                <center>
+                <small  class="btn btn-warning"><a  th:href="@{/registro}"role="button">Comprar </a></small>
+                </center>
+                </div>
+                </div>
+               </div>
+                
+                <div class="card-body"> 
+                <h5 class="card-title">Vela decorativa creada con cera de color para dar ese toque de
+                diseño en tu entorno, cuenta con recipiente en forma de charola de color aluminio.</h5><br>
+                <p class="card-text text-justify">
+                Si quieres adiquirir este producto y personalizarlo a tu gusto dale clic en comprar
+                </p>
+               </div>
+               </div>
+ 			   </div>
+               </div>  
+				<footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+              		  <script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+					  <script th:src="@{/boostrap/js/popper.js}"></script>
+					  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>	  
+					</div>
+</body>
+</html>

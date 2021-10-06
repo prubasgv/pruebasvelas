@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaApp</title>
+  <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+  </head>
+<body>
+    <header th:insert="fragments/menu.html::menu-principal">
+       </header>
+        <!--***********************************Buscador productos**********************-->
+        <!-- ************* -->
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+            </ol>
+            <div>
+        <div class="jumbotron bg bg-info" style="margin-top: 20px;">
+     		<div class="container" >       
+            <h4 style="color: White">Encuentra el producto que andas buscando.</h4>
+           <h6 style="color: white"> Puedes buscar por categorías.</h6>
+            <form class="form-inline">
+            <input type="text" class="form-control mb-3" id="exampleFormControlInput1" placeholder="Escriba una búsqueda">&nbsp;
+            <select class="custom-select custom-select mb-3">
+            <option selected>Seleccione una categoría</option>
+            <option value="1">Aromatica</option>
+            <option value="2">Decorativa</option>
+            <option value="3">Cumpleaños</option>
+            <option value="4">Más opciones</option>
+            </select>&nbsp;
+            <button type="submit" class="btn bg-danger text-white mb-3">Buscar</button>
+            </form>
+            </div>
+            </div>
+           
+            <!--********************Carrusel*********************************-->
+
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img th:src="@{/imges/Carrucel1.jfif}" height="350" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Tienda de velas</h5>
+                      <p>Más de 200 articulos diponibles</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img th:src="@{/imges/Carrucel2.jfif}" height="350" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Velas Importadas</h5>
+                      <p>
+                      Todo lo que necesitas para ,<br>
+                      lo encuentras aqui.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img th:src="@{/imges/Carrucel3.jpg}" height="350" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Más buscado</h5>
+                      <p>
+                      Decorar tu hogar con velas es parte de tu vida
+                      </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img th:src="@{/imges/Carrucel4.jpg}" height="350" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Comodidad a donde quiera que vallas</h5>
+                      <p>Conoce los tipos de  disposibles al dia.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <!--********************Productos******************-->
+
+              <div class="container"  style="margin-top: 20px; "   >
+              
+                <h4 class="font-weight-bold text-center text-capitalize" >
+                Productos Destacados</h4>
+                </div>
+                <div class="container-fluid p-3 my-3 ">
+                <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/Decorativa.jfif}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                
+                <div class="card-body"> 
+                <h5 class="card-title"><center>Decora tu hogas o trabajo</center></h5>
+                <p class="card-text text-justify">
+                Decora tu hogar con velas decorativas
+                </p>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" th:href="@{/descripcion}"role="button">Ver detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block"
+                th:src="@{/imges/VelaAmor.jpg}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                
+                <h5 class="card-title"><center>Lo favoritos de México</center></h5>
+                <p class="card-text">
+                Decora tu cena Romantica con nuestros productos
+                </p>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" th:href="@{/descripcion2}" role="button">Ver detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+               
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/velasCumpleaños.jfif}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title"><center> Diseño unico </center></h5>
+                <p class="card-text">
+                 Decora tu pastel de cumpleaños con todos,
+                 nuestros diseños disponibles.
+                </p> 
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" th:href="@{/descripcion3}" role="button">Ver Detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div> 
+        	
+        		<!-- -Se agrego más variedad -->
+        		 <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block" 
+                th:src="@{/imges/VelasEspeciales.jfif}" alt="Generic placeholder image" width="150" height="150"
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title"><center>Especiales </center></h5>
+                <p class="card-text">
+                
+                </p>
+                </div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" th:href="@{/descripcion4}" role="button">Ver Detalles &raquo;</a></small>
+                </div>
+                </div>
+                </div>
+                
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block"
+                th:src="@{/imges/Carrucel1.jfif}" alt="Generic placeholder image" width="150" height="150" 
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title">Lo mas buscado</h5>
+                <p class="card-text">
+                Los productos más solitados por los clientes
+				</p>
+				</div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></small>
+                </div>
+                	</div>
+                		</div>
+                			
+                
+                
+        
+                <div class="col mb-4">
+                <div class="card h-100">
+                <img class="rounded mx-auto d-block"
+                th:src="@{/imges/MasVelas.jpg}" alt="Generic placeholder image" width="150" height="150" 
+                style="margin-top: 10px;">
+                <div class="card-body">
+                <h5 class="card-title">Más todavía</h5>
+                <p class="card-text">
+                Aqui podras obtener más productos disponibles
+				</p>
+				</div>
+                <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-secondary" href="#" role="button">Ver detalles &raquo;</a></small>
+                </div>
+                	</div>
+                		</div>
+                			</div>
+                               <!--*********************Pie de pagina***********************-->
+                <footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+              		  <script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+					  <script th:src="@{/boostrap/js/popper.js}"></script>
+					  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>
+					  
+                </div>				 
+    </body>
+</html>

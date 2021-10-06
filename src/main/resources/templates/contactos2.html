@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiendaApp</title>
+  <link rel="stylesheet" th:href="@{/boostrap/css/bootstrap.min.css}">
+  </head>
+<body>
+    <header th:insert="fragments/menu.html::menu-principal">
+       </header>
+       
+       
+       <form style="margin-top: 80px;">
+
+    <div class="form-group"> <!-- Full Name -->
+        <label for="full_name_id" class="control-label">Nombre Completo</label>
+        <input type="text" class="form-control" id="full_name_id" name="full_name" placeholder="Apellidos, Nombre">
+    </div>    
+
+    <div class="form-group"> <!-- Street 1 -->
+        <label for="street1_id" class="control-label">Correo Electronico</label>
+        <input type="email" class="form-control" id="street1_id" name="street1" placeholder="Ejemplo@gmail.com">
+    </div>                    
+                            
+                         
+                            
+    <div class="form-group"> <!-- State Button -->
+        <label for="state_id" class="control-label">Municipio</label>
+        <select class="form-control" id="state_id">
+            <option value="AL">Nezahualcoyotl</option>
+            <option value="AK">Chimalhuacan</option>
+        </select>                    
+    </div>
+    
+    
+    <div class="form-group"> <!-- Submit Button -->
+        <center><button type="submit" class="btn btn-primary" th:href="@{/menu}">Enviar</button></center>
+    </div>     
+    
+</form>
+<center>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.9212145265456!2d-86.84426353559054!3d21.15553343881537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bf4cb1f97a7%3A0xb8dd52706f0b766f!2s31%2C%2077508%20Canc%C3%BAn%2C%20Q.R.!5e0!3m2!1ses-419!2smx!4v1614031396202!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</center>
+
+           <!--*********************Pie de pagina***********************-->
+                <footer class="footer" th:insert="fragments/footer.html::pie-pagina">
+                    </footer>
+              		  <script th:src="@{/boostrap/js/jquery-3.5.1.js}"></script>
+					  <script th:src="@{/boostrap/js/popper.js}"></script>
+					  <script th:src="@{/boostrap/js/bootstrap.min.js}"></script>
+					  
+              			 
+    </body>
+</html>
